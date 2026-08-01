@@ -28,14 +28,14 @@ Install `carrier` first (see the [guide](https://github.com/joshuamarie/carrier#
 carrier install gh:joshuamarie/fpurrr
 ```
 
-You must install `{box}` through
+You must install `{box}` from the [forked version](https://github.com/joshuamarie/box) of the [original repo](https://github.com/klmr/box) through: 
 
 ``` r
 # install.packages(pak)
 pak::pak("joshuamarie/box@carrier-module-support")
 ```
 
-Since the patches are applied on only on this forked version found on `carrier-module-support` branch. 
+Since the patches are applied only on this forked version under `carrier-module-support` branch. 
 
 ## Usage
 
@@ -44,7 +44,7 @@ Since the patches are applied on only on this forked version found on `carrier-m
 ```{r}
 box::use(
     fp = fpurrr, 
-    fpurrr/map,
+    fpurrr/map,   # or fpurrr[map]
 )
 ```
 
@@ -52,21 +52,27 @@ box::use(
 
 ### Examples
 
-Note: Both paths reach the same underlying code, so `fp$map` and `map` are interchangeable:
+*Note: Both paths reach the same underlying code, so `fp$map` and `map` are interchangeable.*
 
-```{r}
-# Without types
-fp$map$call(1:5, sqrt)
-map$call(1:5, sqrt)
+Here's a demo: 
 
-# With types
-fp$map$call@dbl(1:5, sqrt)
-map$call@dbl(1:5, sqrt)
-```
+1.  Without types
+
+    ```{r}
+    fp$map$call(1:5, sqrt)
+    map$call(1:5, sqrt)
+    ```
+
+2.  With types
+
+    ```{r}
+    fp$map$call@dbl(1:5, sqrt)
+    map$call@dbl(1:5, sqrt)
+    ```
 
 ## Dependencies
 
-`{fpurrr}` relies on:
+`{fpurrr}` currently depends on:
 
 - [`{rlang}`](https://rlang.r-lib.org/)
 - [`{purrr}`](https://purrr.tidyverse.org/)
