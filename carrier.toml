@@ -1,0 +1,20 @@
+[module]
+name = "fpurrr"
+version = "0.1.0"
+description = "A restructured `{purrr}` version compatible with `{box}` package"
+authors = [
+    { name = "Joshua Marie", email = "joshua.marie.k@gmail.com" },
+]
+license = "Unknown"
+r_version = "4.0.0"
+src = "purrr"
+
+[package_deps]
+rlang = "*"
+purrr = { version = ">=1.2.0", repo = "https://packagemanager.posit.co/cran/2025-12-01" }
+S7 = "*"
+# ggplot2 = ">=3.4.0"
+
+[test]
+framework = "testthat"
+dir = "tests"
