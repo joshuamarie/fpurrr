@@ -2,6 +2,7 @@
 box::use(
     ./map,
     ./map2,
-    # ./imap,
+    ./imap,
     ./pmap,
+    ./walk, 
 )
