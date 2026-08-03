@@ -8,9 +8,11 @@
 # fpurrr
 
 A package / module, only be accessed by `box::use()`, is a restructured
-version of `{purrr}` in a complete modular version. Take note that this
-is not an R package, it is still a package but on complete different
-world, similar to Python packages.
+version of `{purrr}` in a complete modular version (e.g. having
+hierarchical structure, not a flat structure unlike `R/` from a
+traditional R packages). Take note that this is not an R package,
+although it is still a package but on complete different world (similar
+to Python packages).
 
 ## Installation
 
